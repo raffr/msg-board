@@ -1,0 +1,15 @@
+<h2>Timeline</h2>
+<table class="table table-condensed">
+  <tbody>
+    <tr ng-repeat="lists in list">
+      <td>{{lists.message}}</td>
+    </tr>
+  </tbody>
+</table>
+<form novalidate name="addMsg" id="add-new-form" method="post" action="" >
+<div class="wrapper">
+    <div class="highlighter" id="overflowText"></div>
+    <textarea id="message" name="message" maxlength="140" ng-model="message.newmsg" required></textarea>
+</div>
+ <br><button class="btn btn-primary" ng-disabled="addMsg.$invalid || isUnchanged(message)" id="add-new-btn" ng-click="add_new(message)">Postar</button>
+</form>
